@@ -1,11 +1,24 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { Header } from '../features/Header';
+import { Search } from '../features/Search';
 
-import styles from '../styles/home.module.scss'
+import styles from './home.module.scss';
 
 const Home: NextPage = () => {
-  return (
-   <h1 className={styles.title}>Hello world</h1>
-  )
-}
+	return (
+		<>
+			<Head>
+				<title>Pokedex</title>
+			</Head>
+			<div className={styles.app}>
+				<main>
+					<Header />
+					<Search />
+				</main>
+			</div>
+		</>
+	);
+};
 
-export default Home
+export default Home;

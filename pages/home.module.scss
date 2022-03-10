@@ -1,0 +1,13 @@
+.app {
+	max-width: 360px;
+	margin: 2px auto;
+	height: 640px;
+	background: var(--background);
+	border-radius: 12px;
+
+	main {
+		width: 328px;
+		margin: 0 auto;
+		padding: 24px 0;
+	}
+}
