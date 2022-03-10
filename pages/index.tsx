@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Card } from '../features/Card';
 import { Header } from '../features/Header';
 import { Search } from '../features/Search';
 
@@ -15,6 +16,15 @@ const Home: NextPage = () => {
 				<main>
 					<Header />
 					<Search />
+					<div className={styles.cardsContainer}>
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+					</div>
 				</main>
 			</div>
 		</>
