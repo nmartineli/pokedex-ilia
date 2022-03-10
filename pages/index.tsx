@@ -48,13 +48,13 @@ export default function Home({ pokemons }: PokedexProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const apiData = await axios
-		.get('https://pokeapi.co/api/v2/pokemon/?limit=30')
+		.get('https://pokeapi.co/api/v2/pokemon/?limit=200')
 		.then((res) => res.data.results)
 		.catch((error) => console.error(error));
 
 	const pokemons = apiData.map((pokemonData: PokemonData) => {
 		const pokemonIndex = pokemonData.url.split('/')[6];
-		const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
+		const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`;
 
 		return {
 			name: pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1),
@@ -63,8 +63,6 @@ export const getStaticProps: GetStaticProps = async () => {
 			imageUrl,
 		};
 	});
-
-	console.log(pokemons);
 
 	return {
 		props: {
