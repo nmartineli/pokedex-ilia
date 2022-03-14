@@ -8,12 +8,13 @@ type Props = {
 		url: string;
 		pokemonIndex: string;
 		imageUrl: string;
+		type: string;
 	};
 };
 
 export function Card({ pokemon }: Props) {
 	return (
-		<section className={styles.cardContainer}>
+		<section className={[styles.cardContainer, styles[`${pokemon.type}`]].join(' ')}>
 			<p>#{pokemon.pokemonIndex}</p>
 			<div className={styles.cardImageContainer}>
 				<Image src={pokemon.imageUrl} alt="Placeholder" width={72} height={72} className={styles.cardImage} />
