@@ -17,8 +17,8 @@ interface PokemonDataUpdated extends PokemonData {
 }
 
 export function CardsContainer() {
-	const [data, setData] = useState(null);
-	const [isLoading, setLoading] = useState(false);
+	const [data, setData] = useState<PokemonDataUpdated[]>([]);
+	const [isLoading, setLoading] = useState<boolean>(false);
 
 	async function getApiData() {
 		const apiData = await axios

@@ -1,0 +1,13 @@
+.pokemonHero {
+	margin: 0 auto;
+	width: 328px;
+
+	.pokemonImage {
+		position: relative;
+		height: 200px;
+		width: 200px;
+		display: block;
+		margin: 0 auto;
+		z-index: 9999;
+	}
+}

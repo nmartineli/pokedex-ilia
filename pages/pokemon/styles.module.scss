@@ -1,0 +1,11 @@
+.app {
+	max-width: 360px;
+	height: 640px;
+	margin: 2px auto;
+	background: var(--type-grass);
+	border-radius: 12px;
+	overflow-y: auto;
+	background-image: url('/images/hero-pokeball.svg');
+	background-repeat: no-repeat;
+	background-position: 96% 2%;
+}
