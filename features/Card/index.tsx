@@ -14,14 +14,16 @@ type Props = {
 
 export function Card({ pokemon }: Props) {
 	return (
-		<section className={[styles.cardContainer, styles[`${pokemon.type}`]].join(' ')}>
-			<p>#{pokemon.pokemonIndex}</p>
-			<div className={styles.cardImageContainer}>
-				<Image src={pokemon.imageUrl} alt="Placeholder" width={72} height={72} className={styles.cardImage} />
-			</div>
-			<div className={styles.cardNameContainer}>
-				<h2>{pokemon.name}</h2>
-			</div>
-		</section>
+		<a href={`pokemon/${pokemon.url}`} className={styles.link}>
+			<section className={[styles.cardContainer, styles[`${pokemon.type}`]].join(' ')}>
+				<p>#{pokemon.pokemonIndex}</p>
+				<div className={styles.cardImageContainer}>
+					<Image src={pokemon.imageUrl} alt="Placeholder" width={72} height={72} className={styles.cardImage} />
+				</div>
+				<div className={styles.cardNameContainer}>
+					<h2>{pokemon.name}</h2>
+				</div>
+			</section>
+		</a>
 	);
 }

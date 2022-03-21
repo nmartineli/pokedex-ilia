@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { usePokemonList } from '../../src/context/usePokemonList';
 import { Card } from '../Card';
 
 import styles from './styles.module.scss';
@@ -49,7 +48,7 @@ export function CardsContainer() {
 
 					return {
 						name: pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1),
-						url: pokemonData.url,
+						url: pokemonData.url.split('/')[6],
 						pokemonIndex: String(pokemonIndex).padStart(3, '0'),
 						imageUrl,
 						type,
@@ -57,7 +56,6 @@ export function CardsContainer() {
 				})
 			);
 			setData(pokemonUpdatedData);
-			console.log(pokemonUpdatedData);
 			setLoading(false);
 		}
 		loadData();

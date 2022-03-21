@@ -8,6 +8,15 @@
 	div {
 		display: flex;
 
+		a {
+			text-decoration: none;
+			transition: all 1s ease;
+
+			&:hover {
+				opacity: 70%;
+			}
+		}
+
 		h1 {
 			margin-left: 16px;
 			font-weight: 700;
