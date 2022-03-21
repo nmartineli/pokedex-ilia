@@ -17,7 +17,6 @@
 				padding: 2px 8px;
 				font-size: 10px;
 				color: var(--white);
-				background: var(--type-poison);
 				margin: 0 8px;
 				border-radius: 10px;
 			}
@@ -29,7 +28,77 @@
 			text-align: center;
 			margin: 16px 0;
 		}
+		.grass {
+			color: var(--type-grass);
+		}
 
+		.ghost {
+			color: var(--type-ghost);
+		}
+
+		.steel {
+			color: var(--type-steel);
+		}
+
+		.water {
+			color: var(--type-water);
+		}
+
+		.psychic {
+			color: var(--type-psychic);
+		}
+
+		.ice {
+			color: var(--type-ice);
+		}
+
+		.dark {
+			color: var(--type-dark);
+		}
+
+		.fairy {
+			color: var(--type-fairy);
+		}
+
+		.normal {
+			color: var(--type-normal);
+		}
+
+		.fighting {
+			color: var(--type-fighting);
+		}
+
+		.flying {
+			color: var(--type-flying);
+		}
+
+		.poison {
+			color: var(--type-poison);
+		}
+
+		.fire {
+			color: var(--type-fire);
+		}
+
+		.bug {
+			color: var(--type-bug);
+		}
+
+		.ground {
+			color: var(--type-ground);
+		}
+
+		.electric {
+			color: var(--type-electric);
+		}
+
+		.dragon {
+			color: var(--type-dragon);
+		}
+
+		.rock {
+			color: var(--type-rock);
+		}
 		.about_content__table {
 			display: flex;
 			flex-direction: row;
