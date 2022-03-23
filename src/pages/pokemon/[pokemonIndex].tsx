@@ -35,48 +35,6 @@ interface PokemonAboutInfo {
 	};
 }
 
-interface CompletedColor {
-	rock: string;
-	ghost: string;
-	steel: string;
-	water: string;
-	grass: string;
-	psychic: string;
-	ice: string;
-	dark: string;
-	fairy: string;
-	normal: string;
-	fighting: string;
-	flying: string;
-	poison: string;
-	ground: string;
-	bug: string;
-	fire: string;
-	electric: string;
-	dragon: string;
-}
-
-interface BarColor {
-	rock: string;
-	ghost: string;
-	steel: string;
-	water: string;
-	grass: string;
-	psychic: string;
-	ice: string;
-	dark: string;
-	fairy: string;
-	normal: string;
-	fighting: string;
-	flying: string;
-	poison: string;
-	ground: string;
-	bug: string;
-	fire: string;
-	electric: string;
-	dragon: string;
-}
-
 export default function PokemonPage({
 	pokemonHeaderInfo,
 	pokemonHeroInfo,
@@ -155,9 +113,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		pokemonMoves.push(move);
 	}
 
-	const type = pokemonStatsData.types[0].type.name;
+	const type: string = pokemonStatsData.types[0].type.name;
 
-	const completedColor: CompletedColor = {
+	const completedColor: any = {
 		rock: '#b69e31',
 		ghost: '#70559b',
 		steel: '#b7b9d0',
@@ -178,7 +136,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		dragon: '#7037ff',
 	};
 
-	const barColor: BarColor = {
+	const barColor: any = {
 		rock: '#b69e3140',
 		ghost: '#70559b40',
 		steel: '#b7b9d040',
@@ -199,7 +157,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		dragon: '#7037ff40',
 	};
 
-	const completedColorCode: string = completedColor[type];
+	const completedColorCode = completedColor[type];
 
 	const barColorCode = barColor[type];
 
