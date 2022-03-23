@@ -11,7 +11,9 @@ export default function PokemonHeader({ pokemonHeaderInfo }: PokemonHeaderProps)
 		<nav className={styles.pokemonHeader}>
 			<div>
 				<Link href="/" passHref>
-					<Image src="/images/arrow-left.svg" alt="" width={24} height={32} />
+					<a>
+						<Image src="/images/arrow-left.svg" alt="" width={24} height={32} />
+					</a>
 				</Link>
 				<h1>{pokemonHeaderInfo.name}</h1>
 			</div>
