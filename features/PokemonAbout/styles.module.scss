@@ -1,0 +1,134 @@
+.about {
+	background: var(--background);
+	border-radius: 8px;
+	position: relative;
+	top: -56px;
+	margin: 0 4px 4px 4px;
+
+	.about_content {
+		padding: 56px 20px 24px;
+
+		.about_content__type {
+			display: flex;
+			margin: 0 auto;
+			justify-content: center;
+
+			h3 {
+				padding: 2px 8px;
+				font-size: 10px;
+				color: var(--white);
+				margin: 0 8px;
+				border-radius: 10px;
+			}
+		}
+
+		h2 {
+			font-size: 14px;
+			font-weight: 700;
+			text-align: center;
+			margin: 16px 0;
+		}
+		.grass {
+			color: var(--type-grass);
+		}
+
+		.ghost {
+			color: var(--type-ghost);
+		}
+
+		.steel {
+			color: var(--type-steel);
+		}
+
+		.water {
+			color: var(--type-water);
+		}
+
+		.psychic {
+			color: var(--type-psychic);
+		}
+
+		.ice {
+			color: var(--type-ice);
+		}
+
+		.dark {
+			color: var(--type-dark);
+		}
+
+		.fairy {
+			color: var(--type-fairy);
+		}
+
+		.normal {
+			color: var(--type-normal);
+		}
+
+		.fighting {
+			color: var(--type-fighting);
+		}
+
+		.flying {
+			color: var(--type-flying);
+		}
+
+		.poison {
+			color: var(--type-poison);
+		}
+
+		.fire {
+			color: var(--type-fire);
+		}
+
+		.bug {
+			color: var(--type-bug);
+		}
+
+		.ground {
+			color: var(--type-ground);
+		}
+
+		.electric {
+			color: var(--type-electric);
+		}
+
+		.dragon {
+			color: var(--type-dragon);
+		}
+
+		.rock {
+			color: var(--type-rock);
+		}
+		.about_content__table {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			height: 48px;
+			margin-bottom: 16px;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+
+				h4 {
+					font-size: 8px;
+					font-weight: 400;
+					color: var(--medium-gray);
+					text-align: center;
+				}
+			}
+			div:nth-child(2) {
+				padding: 0 24px;
+				border-right: 1px solid var(--light-gray);
+				border-left: 1px solid var(--light-gray);
+			}
+		}
+		p,
+		.about_content__table > p {
+			font-size: 10px;
+			font-weight: 400;
+			color: var(--dark-gray);
+		}
+	}
+}

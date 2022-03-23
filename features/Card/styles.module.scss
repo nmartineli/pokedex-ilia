@@ -1,0 +1,258 @@
+.link {
+	text-decoration: none;
+	transition: all 1s ease;
+
+	&:hover {
+		opacity: 70%;
+	}
+
+	.cardContainer {
+		width: 104px;
+		height: 112px;
+		border-radius: 8px;
+
+		p {
+			text-align: right;
+			margin: 4px 8px 0 0;
+			font-size: 8px;
+			font-weight: 400;
+		}
+
+		.cardImageContainer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.cardNameContainer {
+			margin-top: 2px;
+			border-radius: 0 0 8px 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 20px;
+
+			h2 {
+				color: var(--white);
+				text-align: center;
+				font-size: 10px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+.grass {
+	border: 1px solid var(--type-grass);
+
+	p {
+		color: var(--type-grass);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-grass);
+	}
+}
+
+.ghost {
+	border: 1px solid var(--type-ghost);
+
+	p {
+		color: var(--type-ghost);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-ghost);
+	}
+}
+
+.steel {
+	border: 1px solid var(--type-steel);
+
+	p {
+		color: var(--type-steel);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-steel);
+	}
+}
+
+.water {
+	border: 1px solid var(--type-water);
+
+	p {
+		color: var(--type-water);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-water);
+	}
+}
+
+.psychic {
+	border: 1px solid var(--type-psychic);
+
+	p {
+		color: var(--type-psychic);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-psychic);
+	}
+}
+
+.ice {
+	border: 1px solid var(--type-ice);
+
+	p {
+		color: var(--type-ice);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-ice);
+	}
+}
+
+.dark {
+	border: 1px solid var(--type-dark);
+
+	p {
+		color: var(--type-dark);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-dark);
+	}
+}
+
+.fairy {
+	border: 1px solid var(--type-fairy);
+
+	p {
+		color: var(--type-fairy);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-fairy);
+	}
+}
+
+.normal {
+	border: 1px solid var(--type-normal);
+
+	p {
+		color: var(--type-normal);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-normal);
+	}
+}
+
+.fighting {
+	border: 1px solid var(--type-fighting);
+
+	p {
+		color: var(--type-fighting);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-fighting);
+	}
+}
+
+.flying {
+	border: 1px solid var(--type-flying);
+
+	p {
+		color: var(--type-flying);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-flying);
+	}
+}
+
+.poison {
+	border: 1px solid var(--type-poison);
+
+	p {
+		color: var(--type-poison);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-poison);
+	}
+}
+
+.fire {
+	border: 1px solid var(--type-fire);
+
+	p {
+		color: var(--type-fire);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-fire);
+	}
+}
+
+.bug {
+	border: 1px solid var(--type-bug);
+
+	p {
+		color: var(--type-bug);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-bug);
+	}
+}
+
+.ground {
+	border: 1px solid var(--type-ground);
+
+	p {
+		color: var(--type-ground);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-ground);
+	}
+}
+
+.electric {
+	border: 1px solid var(--type-electric);
+
+	p {
+		color: var(--type-electric);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-electric);
+	}
+}
+
+.dragon {
+	border: 1px solid var(--type-dragon);
+
+	p {
+		color: var(--type-dragon);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-dragon);
+	}
+}
+
+.rock {
+	border: 1px solid var(--type-rock);
+
+	p {
+		color: var(--type-rock);
+	}
+
+	.cardNameContainer {
+		background-color: var(--type-rock);
+	}
+}

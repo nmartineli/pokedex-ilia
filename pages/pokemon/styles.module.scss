@@ -1,0 +1,82 @@
+.page {
+	max-width: 360px;
+	height: 640px;
+	margin: 2px auto;
+	border-radius: 12px;
+	overflow-y: auto;
+	background-image: url('/images/hero-pokeball.svg');
+	background-repeat: no-repeat;
+	background-position: 96% 2%;
+}
+
+.grass {
+	background-color: var(--type-grass);
+}
+
+.ghost {
+	background-color: var(--type-ghost);
+}
+
+.steel {
+	background-color: var(--type-steel);
+}
+
+.water {
+	background-color: var(--type-water);
+}
+
+.psychic {
+	background-color: var(--type-psychic);
+}
+
+.ice {
+	background-color: var(--type-ice);
+}
+
+.dark {
+	background-color: var(--type-dark);
+}
+
+.fairy {
+	background-color: var(--type-fairy);
+}
+
+.normal {
+	background-color: var(--type-normal);
+}
+
+.fighting {
+	background-color: var(--type-fighting);
+}
+
+.flying {
+	background-color: var(--type-flying);
+}
+
+.poison {
+	background-color: var(--type-poison);
+}
+
+.fire {
+	background-color: var(--type-fire);
+}
+
+.bug {
+	background-color: var(--type-bug);
+}
+
+.ground {
+	background-color: var(--type-ground);
+}
+
+.electric {
+	background-color: var(--type-electric);
+}
+
+.dragon {
+	background-color: var(--type-dragon);
+}
+
+.rock {
+	background-color: var(--type-rock);
+}

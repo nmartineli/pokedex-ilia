@@ -1,10 +1,24 @@
-import type { NextPage } from 'next'
+import Head from 'next/head';
 
+import { Header } from '../features/Header';
+import { Search } from '../features/Search';
 
-const Home: NextPage = () => {
-  return (
-   <h1>Hello world</h1>
-  )
+import styles from './home.module.scss';
+import { CardsContainer } from '../features/CardsContainer';
+
+export default function Home() {
+	return (
+		<>
+			<Head>
+				<title>Pokédex</title>
+			</Head>
+			<div className={styles.app}>
+				<main>
+					<Header />
+					<Search />
+					<CardsContainer />
+				</main>
+			</div>
+		</>
+	);
 }
-
-export default Home

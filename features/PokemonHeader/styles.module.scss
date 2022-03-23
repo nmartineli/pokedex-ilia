@@ -1,0 +1,33 @@
+.pokemonHeader {
+	display: flex;
+	justify-content: space-between;
+	width: 288px;
+	margin: 24px auto;
+	align-items: center;
+
+	div {
+		display: flex;
+
+		a {
+			text-decoration: none;
+			transition: all 1s ease;
+
+			&:hover {
+				opacity: 70%;
+			}
+		}
+
+		h1 {
+			margin-left: 16px;
+			font-weight: 700;
+			font-size: 24px;
+			color: var(--white);
+		}
+	}
+
+	h2 {
+		font-size: 12px;
+		font-weight: 700px;
+		color: var(--white);
+	}
+}
