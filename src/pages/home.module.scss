@@ -1,13 +1,15 @@
 .app {
-	max-width: 360px;
-	margin: 2px auto;
-	height: 640px;
+	width: 99vw;
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0 0 0 10px;
+	height: 100vh;
 	background: var(--background);
 	border-radius: 12px;
 	overflow-y: auto;
 
 	main {
-		width: 328px;
+		max-width: 400px;
 		margin: 0 auto;
 		padding: 24px 0;
 	}

@@ -22,11 +22,6 @@ interface PokemonAboutProps {
 	};
 }
 
-interface pokemonType {
-	completedColorCode: string;
-	barColorCode: string;
-}
-
 export default function PokemonAbout({ pokemonAboutInfo }: PokemonAboutProps) {
 	return (
 		<main className={styles.about}>
