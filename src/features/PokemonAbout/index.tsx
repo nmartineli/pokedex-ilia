@@ -62,7 +62,7 @@ export default function PokemonAbout({ pokemonAboutInfo }: PokemonAboutProps) {
 							<h4>Moves</h4>
 						</div>
 					</div>
-					<p>{pokemonAboutInfo.description}</p>
+					<p className={styles.about_content__description}>{pokemonAboutInfo.description}</p>
 				</section>
 				<section>
 					<h2 className={styles[`${pokemonAboutInfo.types[0]}`]}>Base Stats</h2>
