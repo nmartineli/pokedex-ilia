@@ -16,7 +16,7 @@ interface PokemonStatsProps {
 export default function PokemonStats({ pokemonStats }: { pokemonStats: PokemonStatsProps }) {
 	return (
 		<>
-			<div>
+			<div className={styles.pokemonStats__container}>
 				<div className={styles.pokemonStats__table}>
 					<h3>HP</h3>
 					<p>{pokemonStats.hp}</p>

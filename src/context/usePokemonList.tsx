@@ -17,16 +17,17 @@ interface PokemonListProviderProps {
 }
 
 interface PokemonListContextData {
-	data?: PokemonDataUpdated[];
-	isLoading?: boolean;
+	data: PokemonDataUpdated[];
+	completeData: PokemonDataUpdated[];
+	isLoading: boolean;
+	setData: (data: PokemonDataUpdated[]) => void;
 }
 
-export const PokemonListContext = createContext<PokemonListContextData>({});
+const PokemonListContext = createContext<PokemonListContextData>({} as PokemonListContextData);
 
 export function PokemonListProvider({ children }: PokemonListProviderProps) {
-	const [pokemonList, setPokemonList] = useState();
-
 	const [data, setData] = useState<PokemonDataUpdated[]>([]);
+	const [completeData, setCompleteData] = useState<PokemonDataUpdated[]>([]);
 	const [isLoading, setLoading] = useState<boolean>(false);
 
 	async function getApiData() {
@@ -66,12 +67,13 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 				})
 			);
 			setData(pokemonUpdatedData);
+			setCompleteData(pokemonUpdatedData);
 			setLoading(false);
 		}
 		loadData();
 	}, []);
 
-	return <PokemonListContext.Provider value={{ data, isLoading }}>{children}</PokemonListContext.Provider>;
+	return <PokemonListContext.Provider value={{ data, setData, completeData, isLoading }}>{children}</PokemonListContext.Provider>;
 }
 
 export function usePokemonList() {
