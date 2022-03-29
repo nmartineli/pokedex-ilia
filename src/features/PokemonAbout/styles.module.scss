@@ -130,5 +130,11 @@
 			font-weight: 400;
 			color: var(--dark-gray);
 		}
+		.about_content__description {
+			text-align: center;
+			max-width: 350px;
+			display: block;
+			margin: 24px auto;
+		}
 	}
 }
