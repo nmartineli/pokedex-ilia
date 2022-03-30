@@ -23,6 +23,8 @@ interface PokemonListContextData {
 	setData: (data: PokemonDataUpdated[]) => void;
 	noResults: boolean;
 	setNoResults: (boolean: boolean) => void;
+	sortByName: boolean;
+	setSortByName: (boolean: boolean) => void;
 }
 
 const PokemonListContext = createContext<PokemonListContextData>({} as PokemonListContextData);
@@ -32,10 +34,11 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 	const [completeData, setCompleteData] = useState<PokemonDataUpdated[]>([]);
 	const [isLoading, setLoading] = useState<boolean>(false);
 	const [noResults, setNoResults] = useState<boolean>(false);
+	const [sortByName, setSortByName] = useState<boolean>(false);
 
 	async function getApiData() {
 		const apiData = await axios
-			.get('https://pokeapi.co/api/v2/pokemon/?limit=160')
+			.get('https://pokeapi.co/api/v2/pokemon/?limit=20')
 			.then((res) => res.data.results)
 			.catch((error) => console.error(error));
 
@@ -77,7 +80,9 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 	}, []);
 
 	return (
-		<PokemonListContext.Provider value={{ data, setData, noResults, setNoResults, completeData, isLoading }}>
+		<PokemonListContext.Provider
+			value={{ data, setData, noResults, setNoResults, completeData, isLoading, sortByName, setSortByName }}
+		>
 			{children}
 		</PokemonListContext.Provider>
 	);
@@ -87,15 +92,3 @@ export function usePokemonList() {
 	const context = useContext(PokemonListContext);
 	return context;
 }
-
-// let byName = pokemons.sort(function (a, b) {
-// 	if (a.name > b.name) {
-// 		return 1;
-// 	}
-// 	if (a.name < b.name) {
-// 		return -1;
-// 	}
-// 	// a must be equal to b
-// 	return 0;
-// });
-// console.log(byName);
