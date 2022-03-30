@@ -3,7 +3,7 @@ import { usePokemonList } from '../../context/usePokemonList';
 import styles from './styles.module.scss';
 
 export function Search() {
-	const { data, setData, completeData } = usePokemonList();
+	const { data, setData, setNoResults, completeData } = usePokemonList();
 	const [query, setQuery] = useState<string | undefined>();
 
 	function handleQuery(event: React.ChangeEvent<HTMLInputElement>) {
@@ -11,18 +11,19 @@ export function Search() {
 		if (rawQuery !== '') {
 			setQuery(rawQuery.charAt(0).toUpperCase() + rawQuery.slice(1));
 		} else {
+			setNoResults(false);
 			setData(completeData);
 		}
 	}
 
 	function handleSearch(event: React.FormEvent<HTMLFormElement>) {
 		event.preventDefault();
-		let results = [];
-		for (let index = 0; index < data.length; index++) {
-			if (data[index].name === query) {
-				results.push(data[index]);
-			}
+		let results = data.filter((pokemon) => pokemon.name === query);
+
+		if (results.length === 0) {
+			setNoResults(true);
 		}
+
 		setData(results);
 	}
 
