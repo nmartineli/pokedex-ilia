@@ -21,6 +21,8 @@ interface PokemonListContextData {
 	completeData: PokemonDataUpdated[];
 	isLoading: boolean;
 	setData: (data: PokemonDataUpdated[]) => void;
+	noResults: boolean;
+	setNoResults: (boolean: boolean) => void;
 }
 
 const PokemonListContext = createContext<PokemonListContextData>({} as PokemonListContextData);
@@ -29,6 +31,7 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 	const [data, setData] = useState<PokemonDataUpdated[]>([]);
 	const [completeData, setCompleteData] = useState<PokemonDataUpdated[]>([]);
 	const [isLoading, setLoading] = useState<boolean>(false);
+	const [noResults, setNoResults] = useState<boolean>(false);
 
 	async function getApiData() {
 		const apiData = await axios
@@ -73,7 +76,11 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 		loadData();
 	}, []);
 
-	return <PokemonListContext.Provider value={{ data, setData, completeData, isLoading }}>{children}</PokemonListContext.Provider>;
+	return (
+		<PokemonListContext.Provider value={{ data, setData, noResults, setNoResults, completeData, isLoading }}>
+			{children}
+		</PokemonListContext.Provider>
+	);
 }
 
 export function usePokemonList() {
