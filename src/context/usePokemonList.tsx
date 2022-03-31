@@ -38,7 +38,7 @@ export function PokemonListProvider({ children }: PokemonListProviderProps) {
 
 	async function getApiData() {
 		const apiData = await axios
-			.get('https://pokeapi.co/api/v2/pokemon/?limit=20')
+			.get('https://pokeapi.co/api/v2/pokemon/?limit=175')
 			.then((res) => res.data.results)
 			.catch((error) => console.error(error));
 
